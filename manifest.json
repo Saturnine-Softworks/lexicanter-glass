@@ -1,0 +1,11 @@
+{
+	"id": "lexicanter-glass",
+	"name": "Lexicanter Glass",
+	"version": "0.0.0",
+	"minAppVersion": "1.7.7",
+	"description": "The official Lexicanter integration for Obsidian. Allows you to view your .lexc files inside your vaults.",
+	"author": "Saturnine",
+	"authorUrl": "https://lexicanter.com/",
+	"fundingUrl": "https://lexicanter.com/",
+	"isDesktopOnly": false
+}
