@@ -4,7 +4,7 @@ import { mount, unmount } from 'svelte';
 export const LEXICANTER_VIEW = 'lexicanter-view';
 
 export class LexicanterView extends FileView {
-  viewer: Viewer | undefined;
+  viewer!: Viewer;
 
   constructor(leaf: WorkspaceLeaf) {
     super(leaf);
@@ -28,12 +28,10 @@ export class LexicanterView extends FileView {
     const props = $state({ lang: lang });
     this.viewer = mount(Viewer, {
       target: this.contentEl, props,
-    });
+    }) as Viewer;
   }
 
   async onClose() {
-    if (this.viewer) {
-      unmount(this.viewer);
-    }
+    unmount(this.viewer);
   }
 }
